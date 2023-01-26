@@ -10,10 +10,11 @@ async function authenticate(username, password) {
 
 	const token = response.data.token;
 	console.log("token", response);
-	console.log("res", response);
 
 	if (response.data.validated) {
 		return token;
+	} else {
+		return null;
 	}
 }
 

@@ -20,7 +20,7 @@ function WelcomeScreen() {
 			)
 			.then((response) => {
 				setData(response.data);
-				console.log("res", response);
+				// console.log("res", response);
 			})
 			.catch((error) => {
 				console.log("err", error);
@@ -31,7 +31,7 @@ function WelcomeScreen() {
 		<View style={styles.rootContainer}>
 			<Text style={styles.title}>You authenticated successfully</Text>
 			{/* use to check data has been fetched */}
-			{/* <NotesList data={data} setData={setData} /> */}
+			<NotesList data={data} setData={setData} />
 		</View>
 	);
 }

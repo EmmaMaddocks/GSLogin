@@ -99,8 +99,9 @@ function Root() {
 	useEffect(() => {
 		async function fetchToken() {
 			const storedToken = await AsyncStorage.getItem("token");
+			console.log(storedToken);
 
-			if (storedToken) {
+			if (storedToken !== null) {
 				authCtx.authenticate(storedToken);
 			}
 			await SplashScreen.hideAsync();
